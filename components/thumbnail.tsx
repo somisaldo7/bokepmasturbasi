@@ -4,9 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 const ImageLoader = ({ src, width, quality }: any) => {
-    return `${src}&w=320&q=${
-        quality || 80
-    }`;
+    return `${src}&w=320&q=100`;
 };
 
 const Thumbnail = ({
