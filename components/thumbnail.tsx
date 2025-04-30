@@ -4,20 +4,20 @@ import Image from "next/image";
 import { useState } from "react";
 
 const ImageLoader = ({ src, width, quality }: any) => {
-    return `${src}&w=320&q=100`;
+    return `${src}&w=320&q=${
+        quality || 80
+    }`;
 };
 
 const Thumbnail = ({
-    single_img,
-    splash_img,
+    thumbnail,
     title,
 }: {
-    single_img: string;
-    splash_img: string;
+    thumbnail: string;
     title: string;
 }) => {
     const [imageIndex, setImageIndex] = useState(0);
-    const image = [single_img, splash_img, "https://iili.io/J5ahFSa.png"];
+    const image = [thumbnail, "https://iili.io/J5ahFSa.png"];
 
     const handleImageError = () => {
         if (imageIndex === image.length - 1) return;
