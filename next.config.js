@@ -3,7 +3,7 @@ const nextConfig = {
     images: {
         remotePatterns: [
             {
-                hostname: "img.doodcdn.co",
+                hostname: "videothumbs.me",
             },
             {
                 hostname: "placehold.co",
